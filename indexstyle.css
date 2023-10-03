@@ -1,0 +1,51 @@
+.main {
+  grid-area: main;
+}
+
+.panel {
+  display: grid;
+  grid-template-areas:
+    "paneltitle panelpic"
+    "paneltext panelpic"
+
+  ;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr auto;
+
+  padding: 0.5rem;
+  border: 1px solid black;
+  margin: 1rem;
+
+  background-color: #eeeeee;
+}
+
+.panel__title {
+  grid-area: paneltitle;
+}
+
+
+.panel__pic {
+  grid-area: panelpic;
+
+  aspect-ratio: 1/1;
+  width: 200px;
+  height: 200px;
+
+}
+
+.panel__text {
+  grid-area: paneltext;
+}
+
+@media(max-width: 44rem) {
+  .panel {
+    padding: 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 0;
+  }
+
+  .panel+.panel {
+    border-top: none;
+  }
+}

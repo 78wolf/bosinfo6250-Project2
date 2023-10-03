@@ -1,0 +1,50 @@
+.main {
+  grid-area: main;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.card {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 20px;
+
+  background-color: #eeeeee;
+}
+
+.card__link {
+  text-decoration: underline;
+}
+
+.card__pic {
+  aspect-ratio: 1/1;
+  width: 200px;
+  height: 200px;
+}
+
+@media(max-width: 44rem) {
+  .cards {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+    }
+  
+    .card {
+      grid-column: span 12;
+      display: flex;
+      flex-direction: column;
+      align-items:flex-start;
+  
+    }
+}
